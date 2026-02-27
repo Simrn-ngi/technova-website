@@ -8,6 +8,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-56GCPMQ5');</script>
 <!-- End Google Tag Manager -->
+<script>
+  // Function to get query parameters from the URL
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  // Get the 'source' parameter
+  const source = getQueryParam('source');
+
+  // Push to dataLayer if source is present
+  if (source) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'service_consultation_request',
+      'service_source': source
+    });
+  }
+</script>
   <title>Connect With Us - TechNova</title>
   <style>
     body {
@@ -130,8 +149,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
     <a href="about.html">About</a>
+    <a href="services.html">Services</a>
     <a href="contact.html" class="cta-nav">Connect</a>
   </div>
 </nav>
