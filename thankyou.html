@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -9,17 +9,156 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-56GCPMQ5');</script>
 <!-- End Google Tag Manager -->
   <title>Thank You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f8fafc;
+    }
+
+    nav {
+      background: #0f172a;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: 500;
+    }
+
+    .cta-nav {
+      background: #2563eb;
+      padding: 8px 15px;
+      border-radius: 5px;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+    }
+
+    .thank-you-container {
+      max-width: 600px;
+      margin: 100px auto;
+      text-align: center;
+      padding: 40px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .thank-you-container h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    .thank-you-container p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .thank-you-container a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 18px 20px;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #0f172a;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        margin: 15px 0;
+      }
+
+      .thank-you-container {
+        margin: 40px auto;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56GCPMQ5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<h1>Thank You for Connecting!</h1>
-<p>Our team will contact you shortly.</p>
 
-<a href="index.html">Go Back Home</a>
+<nav>
+  <div class="logo">TechNova</div>
+  <div class="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="cta-nav">Connect</a>
+  </div>
+</nav>
+
+<div class="thank-you-container">
+  <h1>Thank You for Connecting!</h1>
+  <p>Our team will contact you shortly.</p>
+  <a href="index.html">Go Back Home</a>
+</div>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
 
 </body>
-
 </html>
