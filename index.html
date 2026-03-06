@@ -240,9 +240,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div>
     <h1>Empowering Businesses With Technology</h1>
     <p>We build scalable web, cloud, and analytics solutions that drive growth.</p>
-    <a href="contact.html">
-      <button class="primary-btn">Get Started</button>
-    </a>
   </div>
 </section>
 
@@ -289,8 +286,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+  document.querySelectorAll('.service-btn').forEach(btn => {
+  btn.addEventListener('click', function(){
+
+    dataLayer.push({
+      event: "cta_click",
+      page_name: "home",
+      button_name: this.innerText.trim(),
+      button_location: "home_section"
 </script>
 
 </body>
 </html>
+
 
