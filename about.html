@@ -322,6 +322,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     navLinks.classList.toggle('active');
   });
 <script>
+
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
 
@@ -334,15 +335,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   if (ctaButton) {
     ctaButton.addEventListener('click', function() {
+
       window.dataLayer = window.dataLayer || [];
+
       window.dataLayer.push({
         event: "cta_click",
         page_name: "about_page"
       });
+
     });
   }
+
 </script>
 
 </body>
 </html>
+
 
