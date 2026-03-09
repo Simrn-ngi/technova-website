@@ -318,7 +318,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+    dataLayer.push({
+      event: "cta_click",
+      page_name: "about",
+      button_name: this.innerText.trim(),
 </script>
 
 </body>
 </html>
+
