@@ -309,36 +309,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
 
-  // Track service consultation clicks
-  document.querySelectorAll('.service-btn').forEach(function(button) {
-    button.addEventListener('click', function() {
+// Track service consultation clicks
+document.querySelectorAll('.service-btn').forEach(function(button) {
+  button.addEventListener('click', function() {
 
-      const url = this.getAttribute("href");
+    const url = this.closest("a")?.getAttribute("href");
 
-      let service = "unknown";
+    let service = "unknown";
 
-      if (url && url.includes("source=")) {
-        service = url.split("source=")[1];
-      }
+    if (url && url.includes("source=")) {
+      service = url.split("source=")[1];
+    }
 
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({
-        event: "service_consultation_request",
-        page_name: window.location.pathname,
-        service_name: service
-      });
-
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "service_consultation_request",
+      page_name: window.location.pathname,
+      service_source: service
     });
+
   });
+});
 </script>
 
 </body>
 </html>
+
 
