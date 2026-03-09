@@ -305,7 +305,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+document.querySelectorAll('.primary-btn').forEach(btn => {
+  btn.addEventListener('click', function(){
+
+    dataLayer.push({
+      event: "cta_click",
+      page_name: "home",
+      button_name: this.innerText.trim(),
+      button_location: "cta_section"
+    });
+
+  });
+});
 </script>
 
 </body>
 </html>
+
