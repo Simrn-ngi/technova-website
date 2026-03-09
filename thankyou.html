@@ -152,13 +152,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script>
+document.addEventListener("DOMContentLoaded", function(){
+
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+  if(hamburger){
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "form_submission_success",
+    form_name: "contact_form",
+    page_name: "thank_you"
   });
+
+});
 </script>
 
 </body>
 </html>
+
