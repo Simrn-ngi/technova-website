@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager --> 
+    <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-56GCPMQ5');</script>
 <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <title>TechNova | IT Solutions Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ===== GTM HEAD CODE (PASTE YOUR GTM CODE HERE LATER) ===== -->
   <!-- Google Tag Manager -->
 
   <!-- End Google Tag Manager -->
@@ -17,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
     }
 
     body {
@@ -27,7 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* NAVBAR */
     nav {
       background: #0f172a;
-      padding: 18px 50px;
+      padding: 20px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -35,7 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     .logo {
       color: white;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: bold;
     }
 
@@ -178,12 +183,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .nav-links {
         display: none;
         position: absolute;
-        top: 60px;
+        top: 65px;
         left: 0;
         background: #0f172a;
         width: 100%;
         flex-direction: column;
         align-items: center;
+        z-index: 1000;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
       }
 
       .nav-links.active {
@@ -194,8 +202,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         margin: 15px 0;
       }
 
+      .hero {
+        height: 60vh;
+      }
+
       .hero h1 {
-        font-size: 36px;
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 20px;
       }
 
       .services {
@@ -240,6 +256,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div>
     <h1>Empowering Businesses With Technology</h1>
     <p>We build scalable web, cloud, and analytics solutions that drive growth.</p>
+    <a href="contact.html">
+      <button class="primary-btn">Get Started</button>
+    </a>
   </div>
 </section>
 
@@ -286,17 +305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
-  document.querySelectorAll('.service-btn').forEach(btn => {
-  btn.addEventListener('click', function(){
-
-    dataLayer.push({
-      event: "cta_click",
-      page_name: "home",
-      button_name: this.innerText.trim(),
-      button_location: "home_section"
 </script>
 
 </body>
 </html>
-
-
