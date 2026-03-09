@@ -163,7 +163,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+<script>
+window.dataLayer = window.dataLayer || [];
+
+dataLayer.push({
+  event: "form_submission_success",
+  form_name: "contact_form",
+  page_name: "thank_you"
+});
+</script>
 </script>
 
 </body>
 </html>
+
