@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -27,10 +27,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
   }
 </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Connect With Us - TechNova</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       background: #f8fafc;
       margin: 0;
     }
@@ -48,6 +56,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
     }
 
     button {
@@ -58,10 +68,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       border: none;
       cursor: pointer;
       border-radius: 5px;
+      font-weight: bold;
     }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
     nav {
       background: #0f172a;
-      padding: 18px 40px;
+      padding: 20px 60px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -70,19 +86,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 25px;
+      margin-left: 30px;
       font-weight: 500;
     }
 
     .cta-nav {
       background: #2563eb;
-      padding: 8px 15px;
-      border-radius: 5px;
+      padding: 8px 16px;
+      border-radius: 6px;
     }
 
     .logo {
       color: white;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: bold;
     }
 
@@ -110,12 +126,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .nav-links {
         display: none;
         position: absolute;
-        top: 60px;
+        top: 65px;
         left: 0;
         background: #0f172a;
         width: 100%;
         flex-direction: column;
         align-items: center;
+        z-index: 1000;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
       }
 
       .nav-links.active {
@@ -129,6 +148,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .container {
         margin: 40px auto;
         padding: 20px;
+        width: 90%;
       }
     }
   </style>
