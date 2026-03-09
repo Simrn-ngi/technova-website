@@ -189,12 +189,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .nav-links {
         display: none;
         position: absolute;
-        top: 60px;
+        top: 65px;
         left: 0;
         background: #0f172a;
         width: 100%;
         flex-direction: column;
         align-items: center;
+        z-index: 1000;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
       }
 
       .nav-links.active {
@@ -256,16 +259,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="service-row">
     <div class="service-content">
       <h2>Enterprise Web Development</h2>
-     <a href="contact.html?source=web-dev"
-   class="service-btn"
-   onclick="dataLayer.push({
-      event: 'cta_click',
-      page_name: 'services',
-      button_name: 'web_dev_consultation',
-      button_location: 'services_section'
-   })">
-Request Consultation →
-</a>
+      <a href="contact.html?source=web-dev" class="service-btn">Request Consultation →</a>
     </div>
     <div class="service-image">
       <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Web Development">
@@ -279,16 +273,7 @@ Request Consultation →
         Our cloud experts design resilient infrastructures, automate deployment pipelines,
         and ensure business continuity across platforms.
       </p>
-     <a href="contact.html?source=cloud-devops"
-   class="service-btn"
-   onclick="dataLayer.push({
-      event: 'cta_click',
-      page_name: 'services',
-      button_name: 'cloud_devops_consultation',
-      button_location: 'services_section'
-   })">
-Request Consultation →
-</a>
+      <a href="contact.html?source=cloud-devops" class="service-btn">Request Consultation →</a>
     </div>
     <div class="service-image">
       <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Cloud Solutions">
@@ -302,16 +287,7 @@ Request Consultation →
         Transform raw data into strategic insights with advanced dashboards,
         predictive modeling, and AI-powered automation systems.
       </p>
-      <a href="contact.html?source=data-ai"
-   class="service-btn"
-   onclick="dataLayer.push({
-      event: 'cta_click',
-      page_name: 'services',
-      button_name: 'data_ai_consultation',
-      button_location: 'services_section'
-   })">
-Request Consultation →
-</a>
+      <a href="contact.html?source=data-ai" class="service-btn">Request Consultation →</a>
     </div>
     <div class="service-image">
       <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Analytics">
@@ -323,15 +299,9 @@ Request Consultation →
 <!-- CTA -->
 <section class="cta-section">
   <h2>Let’s Transform Your Business</h2>
- <a href="contact.html?source=cta-services-page"
-onclick="dataLayer.push({
-  event: 'cta_click',
-  page_name: 'services',
-  button_name: 'connect_experts',
-  button_location: 'cta_section'
-})">
-<button class="service-btn">Connect With Our Experts</button>
-</a>
+  <a href="contact.html?source=cta-services-page">
+    <button class="service-btn">Connect With Our Experts</button>
+  </a>
 </section>
 
 <footer>
@@ -349,4 +319,3 @@ onclick="dataLayer.push({
 
 </body>
 </html>
-
