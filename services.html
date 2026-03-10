@@ -1,335 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-56GCPMQ5');</script>
+
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});
+var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+j.async=true;
+j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-56GCPMQ5');
+</script>
 <!-- End Google Tag Manager -->
-  <meta charset="UTF-8">
-  <title>Our Services | TechNova</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ===== ADD GTM HEAD SCRIPT HERE LATER ===== -->
+<meta charset="UTF-8">
+<title>Our Services | TechNova</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+<style>
 
-    body {
-      background-color: #0f172a;
-      color: white;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
 
-    /* NAVBAR */
-    nav {
-      background: #0f172a;
-      padding: 20px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+body{
+background:#0f172a;
+color:white;
+}
 
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
+/* NAVBAR */
 
-    nav a {
-      text-decoration: none;
-      color: white;
-      margin-left: 30px;
-    }
+nav{
+background:#0f172a;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-    .nav-btn {
-      background: #2563eb;
-      padding: 8px 16px;
-      border-radius: 6px;
-    }
+.logo{
+font-size:24px;
+font-weight:bold;
+}
 
-    .hamburger {
-      display: none;
-      cursor: pointer;
-    }
+nav a{
+text-decoration:none;
+color:white;
+margin-left:30px;
+}
 
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 5px 0;
-    }
+.nav-btn{
+background:#2563eb;
+padding:8px 16px;
+border-radius:6px;
+}
 
-    /* HERO HEADER */
-    .page-hero {
-      background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
-                  url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
-      background-size: cover;
-      background-position: center;
-      padding: 120px 20px;
-      text-align: center;
-    }
+.hamburger{
+display:none;
+cursor:pointer;
+}
 
-    .page-hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
+.hamburger div{
+width:25px;
+height:3px;
+background:white;
+margin:5px 0;
+}
 
-    .page-hero p {
-      font-size: 18px;
-      max-width: 700px;
-      margin: auto;
-      color: #d1d5db;
-    }
+/* HERO */
 
-    /* SERVICES SECTION */
-    .services-section {
-      background: linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.9)),
-                  url('https://images.unsplash.com/photo-1522071820081-009f0129c71c');
-      background-size: cover;
-      background-position: center;
-      padding: 120px 80px;
-    }
+.page-hero{
+background:linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.85)),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+background-size:cover;
+background-position:center;
+padding:120px 20px;
+text-align:center;
+}
 
-    .service-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 120px;
-      gap: 60px;
-    }
+.page-hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
 
-    .service-row.reverse {
-      flex-direction: row-reverse;
-    }
+.page-hero p{
+font-size:18px;
+max-width:700px;
+margin:auto;
+color:#d1d5db;
+}
 
-    .service-content {
-      flex: 1;
-    }
+/* SERVICES */
 
-    .service-content h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #3b82f6;
-    }
+.services-section{
+background:linear-gradient(rgba(15,23,42,0.9),rgba(15,23,42,0.9)),
+url('https://images.unsplash.com/photo-1522071820081-009f0129c71c');
+background-size:cover;
+background-position:center;
+padding:120px 80px;
+}
 
-    .service-content p {
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 25px;
-      color: #d1d5db;
-    }
+.service-row{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:120px;
+gap:60px;
+}
 
-    .service-btn {
-      display: inline-block;
-      padding: 12px 26px;
-      background: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
+.service-row.reverse{
+flex-direction:row-reverse;
+}
 
-    .service-btn:hover {
-      background: #1d4ed8;
-    }
+.service-content{
+flex:1;
+}
 
-    .service-image {
-      flex: 1;
-    }
+.service-content h2{
+font-size:32px;
+margin-bottom:20px;
+color:#3b82f6;
+}
 
-    .service-image img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-    }
+.service-content p{
+font-size:16px;
+line-height:1.8;
+margin-bottom:25px;
+color:#d1d5db;
+}
 
-    /* CTA */
-    .cta-section {
-      background: #1e293b;
-      padding: 80px 20px;
-      text-align: center;
-    }
+.service-btn{
+display:inline-block;
+padding:12px 26px;
+background:#2563eb;
+color:white;
+text-decoration:none;
+border-radius:6px;
+transition:.3s;
+}
 
-    .cta-section h2 {
-      font-size: 30px;
-      margin-bottom: 20px;
-    }
+.service-btn:hover{
+background:#1d4ed8;
+}
 
-    footer {
-      background: #0f172a;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-      color: #9ca3af;
-    }
+.service-image{
+flex:1;
+}
 
-    /* RESPONSIVE */
-    @media(max-width: 900px) {
-      .service-row,
-      .service-row.reverse {
-        flex-direction: column;
-      }
-    }
+.service-image img{
+width:100%;
+border-radius:10px;
+box-shadow:0 10px 40px rgba(0,0,0,.4);
+}
 
-    @media (max-width: 768px) {
-      nav {
-        padding: 18px 20px;
-      }
+footer{
+background:#0f172a;
+padding:20px;
+text-align:center;
+font-size:14px;
+color:#9ca3af;
+}
 
-      .hamburger {
-        display: block;
-      }
+/* MOBILE */
 
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 65px;
-        left: 0;
-        background: #0f172a;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        z-index: 1000;
-        padding: 20px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-      }
+@media(max-width:900px){
+.service-row,
+.service-row.reverse{
+flex-direction:column;
+}
+}
 
-      .nav-links.active {
-        display: flex;
-      }
+@media(max-width:768px){
 
-      .nav-links a {
-        margin: 15px 0;
-      }
+nav{
+padding:18px 20px;
+}
 
-      .page-hero {
-        padding: 80px 20px;
-      }
+.hamburger{
+display:block;
+}
 
-      .page-hero h1 {
-        font-size: 36px;
-      }
+.nav-links{
+display:none;
+position:absolute;
+top:65px;
+left:0;
+background:#0f172a;
+width:100%;
+flex-direction:column;
+align-items:center;
+z-index:1000;
+padding:20px 0;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
 
-      .services-section {
-        padding: 80px 20px;
-      }
-    }
+.nav-links.active{
+display:flex;
+}
 
-  </style>
+.nav-links a{
+margin:15px 0;
+}
+
+.page-hero{
+padding:80px 20px;
+}
+
+.page-hero h1{
+font-size:36px;
+}
+
+.services-section{
+padding:80px 20px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56GCPMQ5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<!-- ===== ADD GTM BODY SCRIPT HERE LATER ===== -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56GCPMQ5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End GTM -->
+
+<!-- NAVBAR -->
 
 <nav>
-  <div class="logo">TechNova</div>
-  <div class="hamburger">
-      </div>
-<div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/services">Services</a>
-  <a href="/contact" class="nav-btn">Connect</a>
+
+<div class="logo">TechNova</div>
+
+<div class="hamburger">
+<div></div>
+<div></div>
+<div></div>
 </div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="contact.html" class="nav-btn">Connect</a>
+</div>
+
 </nav>
 
 <!-- HERO -->
+
 <section class="page-hero">
-  <h1>Our Technology Services</h1>
-  <p>Enterprise-grade digital solutions engineered to accelerate business growth and operational efficiency.</p>
+<h1>Our Technology Services</h1>
+<p>Enterprise-grade digital solutions engineered to accelerate business growth.</p>
 </section>
 
 <!-- SERVICES -->
+
 <section class="services-section">
 
-  <div class="service-row">
-    <div class="service-content">
-      <h2>Enterprise Web Development</h2>
- <p>
-        We build high-performance web applications and platforms designed for scalability,
-        security, and seamless user experience across devices.
-      </p>
-      <a href="/contact?source=web-dev" class="service-btn">Request Consultation →</a>
-    </div>
-    <div class="service-image">
-      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Web Development">
-    </div>
-  </div>
+<div class="service-row">
 
-  <div class="service-row reverse">
-    <div class="service-content">
-      <h2>Cloud & DevOps Engineering</h2>
-      <p>
-        Our cloud experts design resilient infrastructures, automate deployment pipelines,
-        and ensure business continuity across platforms.
-      </p>
-      <a href="/contact?source=cloud-devops" class="service-btn">Request Consultation →</a>
-    </div>
-    <div class="service-image">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Cloud Solutions">
-    </div>
-  </div>
+<div class="service-content">
 
-  <div class="service-row">
-    <div class="service-content">
-      <h2>Data Analytics & AI</h2>
-      <p>
-        Transform raw data into strategic insights with advanced dashboards,
-        predictive modeling, and AI-powered automation systems.
-      </p>
-      <a href="/contact?source=data-ai" class="service-btn">Request Consultation →</a>
-    </div>
-    <div class="service-image">
-      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Analytics">
-    </div>
-  </div>
+<h2>Enterprise Web Development</h2>
+
+<p>
+We build high-performance web applications designed for scalability and security.
+</p>
+
+<a href="contact.html?source=web-dev" class="service-btn">
+Request Consultation →
+</a>
+
+</div>
+
+<div class="service-image">
+<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+</div>
+
+</div>
+
+<div class="service-row reverse">
+
+<div class="service-content">
+
+<h2>Cloud & DevOps Engineering</h2>
+
+<p>
+Design resilient infrastructures and automate deployment pipelines.
+</p>
+
+<a href="contact.html?source=cloud-devops" class="service-btn">
+Request Consultation →
+</a>
+
+</div>
+
+<div class="service-image">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
+</div>
+
+</div>
+
+<div class="service-row">
+
+<div class="service-content">
+
+<h2>Data Analytics & AI</h2>
+
+<p>
+Transform raw data into strategic insights using dashboards and AI.
+</p>
+
+<a href="contact.html?source=data-ai" class="service-btn">
+Request Consultation →
+</a>
+
+</div>
+
+<div class="service-image">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+</div>
+
+</div>
 
 </section>
 
 <footer>
-  © 2026 TechNova IT Solutions. All Rights Reserved.
+© 2026 TechNova IT Solutions. All Rights Reserved.
 </footer>
 
 <script>
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+/* Hamburger menu */
+
+const hamburger=document.querySelector('.hamburger');
+const navLinks=document.querySelector('.nav-links');
+
+hamburger.addEventListener('click',()=>{
+navLinks.classList.toggle('active');
 });
 
-// Track service consultation clicks
-document.querySelectorAll('.service-btn').forEach(function(button) {
-  button.addEventListener('click', function() {
 
-    const url = this.closest("a")?.getAttribute("href");
+/* Service click tracking */
 
-    let service = "unknown";
+document.querySelectorAll('.service-btn').forEach(function(button){
 
-    if (url && url.includes("source=")) {
-      service = url.split("source=")[1];
-    }
+button.addEventListener('click',function(){
 
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "service_consultation_request",
-      page_name: window.location.pathname,
-      service_source: service
-    });
+const url=this.getAttribute("href");
 
-  });
+let service="unknown";
+
+if(url && url.includes("source=")){
+service=url.split("source=")[1];
+}
+
+window.dataLayer=window.dataLayer||[];
+
+window.dataLayer.push({
+event:"service_consultation_request",
+page_name:window.location.pathname,
+service_source:service
 });
+
+});
+
+});
+
 </script>
 
 </body>
