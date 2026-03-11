@@ -305,9 +305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- CTA -->
 <section class="cta-section">
   <h2>Partner With Us for Digital Growth</h2>
-  <a href="contact.html">
     <button id="cta_connect_team" class="cta-btn">Connect With Our Team</button>
-  </a>
 </section>
 
 <footer>
@@ -331,14 +329,22 @@ const ctaButton = document.getElementById('cta_connect_team');
 
 if (ctaButton) {
 
-  ctaButton.addEventListener('click', function() {
+  ctaButton.addEventListener('click', function(e) {
+
+    e.preventDefault();
 
     window.dataLayer = window.dataLayer || [];
 
     window.dataLayer.push({
       event: "cta_click",
-      page_name: "about_page"
+      page_name: "about_page",
+      button_name: "connect_with_team",
+      button_location: "about_cta_section"
     });
+
+    setTimeout(function(){
+      window.location.href = "contact.html";
+    },300);
 
   });
 
@@ -348,6 +354,7 @@ if (ctaButton) {
 
 </body>
 </html>
+
 
 
 
