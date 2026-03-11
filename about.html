@@ -306,7 +306,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta-section">
   <h2>Partner With Us for Digital Growth</h2>
   <a href="contact.html">
-    <button class="cta-btn">Connect With Our Team</button>
+    <button id="cta_connect_team" class="cta-btn">Connect With Our Team</button>
   </a>
 </section>
 
@@ -315,36 +315,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
 
+// Hamburger Menu Toggle
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+if (hamburger) {
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
-<script>
+}
 
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+// CTA Click Tracking 
+const ctaButton = document.getElementById('cta_connect_team');
 
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
+if (ctaButton) {
 
-  // CTA Click Tracking
-  const ctaButton = document.getElementById('cta_connect_team');
+  ctaButton.addEventListener('click', function() {
 
-  if (ctaButton) {
-    ctaButton.addEventListener('click', function() {
+    window.dataLayer = window.dataLayer || [];
 
-      window.dataLayer = window.dataLayer || [];
-
-      window.dataLayer.push({
-        event: "cta_click",
-        page_name: "about_page"
-      });
-
+    window.dataLayer.push({
+      event: "cta_click",
+      page_name: "about_page"
     });
-  }
+
+  });
+
+}
 
 </script>
 
