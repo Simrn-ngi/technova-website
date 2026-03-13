@@ -311,17 +311,14 @@ if(hamburger){
   });
 }
 
-
-/* Service click tracking — FIXED: double-fire prevented */
-
 document.querySelectorAll('.service-btn').forEach(function(button){
 
+  // FIX: skip if listener already attached
+  if(button.dataset.trackingBound === 'true') return;
+  button.dataset.trackingBound = 'true';
+
   button.addEventListener('click', function(e){
-
     e.preventDefault();
-
-    // FIX: stopImmediatePropagation prevents GTM's click listener
-    // from seeing this event and firing a second tag on the same click
     e.stopImmediatePropagation();
 
     const url = this.getAttribute('href');
@@ -329,7 +326,6 @@ document.querySelectorAll('.service-btn').forEach(function(button){
     const service = params.get('source') || 'unknown';
 
     window.dataLayer = window.dataLayer || [];
-
     window.dataLayer.push({
       event: 'service_consultation_request',
       page_name: window.location.pathname,
@@ -344,9 +340,11 @@ document.querySelectorAll('.service-btn').forEach(function(button){
 
 });
 
+
 </script>
 
 </body>
 </html>
+
 
 
