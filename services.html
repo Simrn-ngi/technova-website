@@ -20,18 +20,8 @@ f.parentNode.insertBefore(j,f);
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
-
-body{
-background:#0f172a;
-color:white;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:#0f172a;color:white;}
 
 nav{
 background:#0f172a;
@@ -41,34 +31,12 @@ justify-content:space-between;
 align-items:center;
 }
 
-.logo{
-font-size:24px;
-font-weight:bold;
-}
+.logo{font-size:24px;font-weight:bold;}
 
-nav a{
-text-decoration:none;
-color:white;
-margin-left:30px;
-}
+nav a{text-decoration:none;color:white;margin-left:30px;}
 
-.nav-btn{
-background:#2563eb;
-padding:8px 16px;
-border-radius:6px;
-}
-
-.hamburger{
-display:none;
-cursor:pointer;
-}
-
-.hamburger div{
-width:25px;
-height:3px;
-background:white;
-margin:5px 0;
-}
+.hamburger{display:none;cursor:pointer;}
+.hamburger div{width:25px;height:3px;background:white;margin:5px 0;}
 
 .page-hero{
 background:linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.85)),
@@ -79,17 +47,8 @@ padding:120px 20px;
 text-align:center;
 }
 
-.page-hero h1{
-font-size:48px;
-margin-bottom:20px;
-}
-
-.page-hero p{
-font-size:18px;
-max-width:700px;
-margin:auto;
-color:#d1d5db;
-}
+.page-hero h1{font-size:48px;margin-bottom:20px;}
+.page-hero p{font-size:18px;max-width:700px;margin:auto;color:#d1d5db;}
 
 .services-section{
 background:linear-gradient(rgba(15,23,42,0.9),rgba(15,23,42,0.9)),
@@ -107,13 +66,9 @@ margin-bottom:120px;
 gap:60px;
 }
 
-.service-row.reverse{
-flex-direction:row-reverse;
-}
+.service-row.reverse{flex-direction:row-reverse;}
 
-.service-content{
-flex:1;
-}
+.service-content{flex:1;}
 
 .service-content h2{
 font-size:32px;
@@ -138,13 +93,9 @@ border-radius:6px;
 transition:.3s;
 }
 
-.service-btn:hover{
-background:#1d4ed8;
-}
+.service-btn:hover{background:#1d4ed8;}
 
-.service-image{
-flex:1;
-}
+.service-image{flex:1;}
 
 .service-image img{
 width:100%;
@@ -162,84 +113,39 @@ color:#9ca3af;
 
 @media(max-width:900px){
 .service-row,
-.service-row.reverse{
-flex-direction:column;
-}
+.service-row.reverse{flex-direction:column;}
 }
 
 @media(max-width:768px){
-
-nav{
-padding:18px 20px;
+nav{padding:18px 20px;}
+.hamburger{display:block;}
+.nav-links{display:none;position:absolute;top:65px;left:0;background:#0f172a;width:100%;flex-direction:column;align-items:center;padding:20px 0;}
+.nav-links.active{display:flex;}
+.nav-links a{margin:15px 0;}
+.page-hero{padding:80px 20px;}
+.page-hero h1{font-size:36px;}
+.services-section{padding:80px 20px;}
 }
-
-.hamburger{
-display:block;
-}
-
-.nav-links{
-display:none;
-position:absolute;
-top:65px;
-left:0;
-background:#0f172a;
-width:100%;
-flex-direction:column;
-align-items:center;
-z-index:1000;
-padding:20px 0;
-border-bottom:1px solid rgba(255,255,255,.1);
-}
-
-.nav-links.active{
-display:flex;
-}
-
-.nav-links a{
-margin:15px 0;
-}
-
-.page-hero{
-padding:80px 20px;
-}
-
-.page-hero h1{
-font-size:36px;
-}
-
-.services-section{
-padding:80px 20px;
-}
-
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- Google Tag Manager (noscript) -->
+<!-- GTM noscript -->
 <noscript>
 <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56GCPMQ5"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 
 <nav>
-
 <div class="logo">TechNova</div>
-
-<div class="hamburger">
-<div></div>
-<div></div>
-<div></div>
-</div>
+<div class="hamburger"><div></div><div></div><div></div></div>
 
 <div class="nav-links">
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="services.html">Services</a>
 </div>
-
 </nav>
 
 <section class="page-hero">
@@ -253,12 +159,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="service-content">
 <h2>Enterprise Web Development</h2>
 <p>We build high-performance web applications designed for scalability and security.</p>
-<!-- FIX: added data-gtm-ignore="true" to signal GTM click triggers to skip this element -->
-<a href="contact.html?source=web-dev" class="service-btn" data-gtm-ignore="true">
+<a href="contact.html?source=web-dev" class="service-btn" data-service="web-dev">
 Request Consultation →
 </a>
 </div>
-
 <div class="service-image">
 <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
 </div>
@@ -268,11 +172,10 @@ Request Consultation →
 <div class="service-content">
 <h2>Cloud & DevOps Engineering</h2>
 <p>Design resilient infrastructures and automate deployment pipelines.</p>
-<a href="contact.html?source=cloud-devops" class="service-btn" data-gtm-ignore="true">
+<a href="contact.html?source=cloud-devops" class="service-btn" data-service="cloud-devops">
 Request Consultation →
 </a>
 </div>
-
 <div class="service-image">
 <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d">
 </div>
@@ -282,11 +185,10 @@ Request Consultation →
 <div class="service-content">
 <h2>Data Analytics & AI</h2>
 <p>Transform raw data into strategic insights using dashboards and AI.</p>
-<a href="contact.html?source=data-ai" class="service-btn" data-gtm-ignore="true">
+<a href="contact.html?source=data-ai" class="service-btn" data-service="data-ai">
 Request Consultation →
 </a>
 </div>
-
 <div class="service-image">
 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
 </div>
@@ -301,7 +203,6 @@ Request Consultation →
 <script>
 
 /* Hamburger menu */
-
 const hamburger=document.querySelector('.hamburger');
 const navLinks=document.querySelector('.nav-links');
 
@@ -311,40 +212,21 @@ if(hamburger){
   });
 }
 
-document.querySelectorAll('.service-btn').forEach(function(button){
-
-  // FIX: skip if listener already attached
-  if(button.dataset.trackingBound === 'true') return;
-  button.dataset.trackingBound = 'true';
-
-  button.addEventListener('click', function(e){
-    e.preventDefault();
-    e.stopImmediatePropagation();
-
-    const url = this.getAttribute('href');
-    const params = new URL(url, window.location.origin).searchParams;
-    const service = params.get('source') || 'unknown';
+/* CLEAN SERVICE TRACKING */
+document.querySelectorAll('.service-btn').forEach(btn=>{
+  btn.addEventListener('click', function(){
 
     window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'service_consultation_request',
+    dataLayer.push({
+      event: "service_consultation_request",
       page_name: window.location.pathname,
-      service_source: service
+      service_source: this.dataset.service
     });
 
-    setTimeout(function(){
-      window.location.href = url;
-    }, 300);
-
-  }, { once: true }); 
-
+  });
 });
 
 </script>
 
 </body>
 </html>
-
-
-
-
