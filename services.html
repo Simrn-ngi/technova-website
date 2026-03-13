@@ -253,7 +253,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <div class="service-content">
 <h2>Enterprise Web Development</h2>
 <p>We build high-performance web applications designed for scalability and security.</p>
-<a href="contact.html?source=web-dev" class="service-btn">
+<!-- FIX: added data-gtm-ignore="true" to signal GTM click triggers to skip this element -->
+<a href="contact.html?source=web-dev" class="service-btn" data-gtm-ignore="true">
 Request Consultation →
 </a>
 </div>
@@ -267,7 +268,7 @@ Request Consultation →
 <div class="service-content">
 <h2>Cloud & DevOps Engineering</h2>
 <p>Design resilient infrastructures and automate deployment pipelines.</p>
-<a href="contact.html?source=cloud-devops" class="service-btn">
+<a href="contact.html?source=cloud-devops" class="service-btn" data-gtm-ignore="true">
 Request Consultation →
 </a>
 </div>
@@ -281,7 +282,7 @@ Request Consultation →
 <div class="service-content">
 <h2>Data Analytics & AI</h2>
 <p>Transform raw data into strategic insights using dashboards and AI.</p>
-<a href="contact.html?source=data-ai" class="service-btn">
+<a href="contact.html?source=data-ai" class="service-btn" data-gtm-ignore="true">
 Request Consultation →
 </a>
 </div>
@@ -305,39 +306,41 @@ const hamburger=document.querySelector('.hamburger');
 const navLinks=document.querySelector('.nav-links');
 
 if(hamburger){
-hamburger.addEventListener('click',()=>{
-navLinks.classList.toggle('active');
-});
+  hamburger.addEventListener('click',()=>{
+    navLinks.classList.toggle('active');
+  });
 }
 
 
-/* Service click tracking */
+/* Service click tracking — FIXED: double-fire prevented */
 
 document.querySelectorAll('.service-btn').forEach(function(button){
 
-button.addEventListener('click',function(e){
+  button.addEventListener('click', function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
-const url=this.getAttribute("href");
+    // FIX: stopImmediatePropagation prevents GTM's click listener
+    // from seeing this event and firing a second tag on the same click
+    e.stopImmediatePropagation();
 
-const params=new URL(url,window.location.origin).searchParams;
+    const url = this.getAttribute('href');
+    const params = new URL(url, window.location.origin).searchParams;
+    const service = params.get('source') || 'unknown';
 
-const service=params.get("source") || "unknown";
+    window.dataLayer = window.dataLayer || [];
 
-window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({
+      event: 'service_consultation_request',
+      page_name: window.location.pathname,
+      service_source: service
+    });
 
-window.dataLayer.push({
-event:"service_consultation_request",
-page_name:window.location.pathname,
-service_source:service
-});
+    setTimeout(function(){
+      window.location.href = url;
+    }, 300);
 
-setTimeout(function(){
-window.location.href=url;
-},300);
-
-});
+  });
 
 });
 
@@ -345,4 +348,5 @@ window.location.href=url;
 
 </body>
 </html>
+
 
